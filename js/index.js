@@ -124,9 +124,8 @@ document.querySelector("#contactForm").addEventListener("submit", (e) => {
 const themeToggle = document.getElementById('theme-toggle');
 const themeIcon = themeToggle.querySelector('i');
 
-// Function to set theme with transition
+// Function to set theme
 function setTheme(theme) {
-    document.documentElement.style.transition = 'background-color 0.3s ease, color 0.3s ease';
     document.documentElement.setAttribute('data-theme', theme);
     localStorage.setItem('theme', theme);
 
@@ -135,16 +134,15 @@ function setTheme(theme) {
     } else {
         themeIcon.classList.replace('fa-sun', 'fa-moon');
     }
-
-    // Remove transition after it's done to avoid weird effects during scroll
-    setTimeout(() => {
-        document.documentElement.style.transition = 'none';
-    }, 300);
 }
 
-// Check for saved theme preference or use preferred color scheme
-const savedTheme = localStorage.getItem('theme') || window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
-setTheme(savedTheme);
+// Initialize theme - default to dark if no preference is set
+const savedTheme = localStorage.getItem('theme');
+if (!savedTheme || savedTheme === 'dark') {
+    setTheme('dark'); // Explicitly set dark theme
+} else {
+    setTheme(savedTheme);
+}
 
 // Theme toggle click handler
 themeToggle.addEventListener('click', () => {
@@ -152,14 +150,6 @@ themeToggle.addEventListener('click', () => {
     const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
     setTheme(newTheme);
 });
-
-// Watch for system theme changes
-window.matchMedia('(prefers-color-scheme: light)').addEventListener('change', e => {
-    if (!localStorage.getItem('theme')) { // Only if user hasn't set a preference
-        setTheme(e.matches ? 'light' : 'dark');
-    }
-});
-
 
 
 
