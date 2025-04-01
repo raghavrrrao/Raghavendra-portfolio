@@ -78,17 +78,20 @@ a:hover {
     border-width: 0px;
 }
 
-
 /* Updated Light Theme Variables */
 [data-theme="light"] {
-    --primary-color: #2a9d8f; /* Slightly darker for better contrast */
+    --primary-color: #2a9d8f;
+    /* Slightly darker for better contrast */
     --secondary-color: #3a86ff;
     --accent-color: #ff9f1c;
-    --text-color: #333333; /* Dark gray for readability */
+    --text-color: #333333;
+    /* Dark gray for readability */
     --light-color: #ffffff;
-    --dark-color: #f8f9fa; /* Very light gray */
+    --dark-color: #f8f9fa;
+    /* Very light gray */
     --background-color: #ffffff;
-    --card-color: #ffffff; /* White cards */
+    --card-color: #ffffff;
+    /* White cards */
     --border-color: #e0e0e0;
     --box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
@@ -105,7 +108,8 @@ a:hover {
 [data-theme="light"] .timeline-title,
 [data-theme="light"] .contact-item,
 [data-theme="light"] .education-degree {
-    color: #222222; /* Darker for headings */
+    color: #222222;
+    /* Darker for headings */
 }
 
 [data-theme="light"] .hero-description,
@@ -115,7 +119,8 @@ a:hover {
 [data-theme="light"] .education-grade,
 [data-theme="light"] .timeline-date,
 [data-theme="light"] .project-role {
-    color: #444444; /* Slightly lighter than headings but still visible */
+    color: #444444;
+    /* Slightly lighter than headings but still visible */
 }
 
 /* Update card styles for light theme */
@@ -124,22 +129,20 @@ a:hover {
 [data-theme="light"] .skill-card,
 [data-theme="light"] .timeline-content,
 [data-theme="light"] .education-card,
-
 [data-theme="light"] .contact-form {
     background-color: var(--card-color);
     border: 1px solid var(--border-color);
     box-shadow: var(--box-shadow);
 }
 
-[data-theme="light"] .btn1{
+[data-theme="light"] .btn1 {
     background-color: var(--primary-color);
     color: var(--dark-color);
-    border: 1px solid var(--border-color);
 }
-[data-theme="light"] .btn1:hover{
+
+[data-theme="light"] .btn1:hover {
     background-color: var(--primary-color);
     color: var(--dark-color);
-    border: 1px solid var(--border-color);
 }
 
 /* Update hover effects for light theme */
@@ -184,6 +187,7 @@ a:hover {
 [data-theme="light"] .skill-progress {
     background-color: var(--primary-color);
 }
+
 .section {
     padding: 5rem 0;
 }
@@ -823,7 +827,7 @@ header.sticky {
 
 /* Contact Section */
 .contact {
-    background-color: var(--background-color)
+    background-color: var(--background-color);
 }
 
 .contact-container {
@@ -1023,14 +1027,14 @@ footer {
     .hamburger.active .bar:nth-child(3) {
         transform: translateY(-8px) rotate(-45deg);
     }
+
     .theme-toggle {
         display: none;
     }
-    
+
     .hamburger {
         margin-left: auto;
     }
-    
 
     .nav-menu {
         position: fixed;
@@ -1062,11 +1066,13 @@ footer {
         font-size: 1.5rem;
     }
 }
+
 @media (min-width: 769px) {
     .theme-toggle {
         display: flex;
     }
 }
+
 @media (max-width: 576px) {
     .personal-info {
         grid-template-columns: 1fr;
