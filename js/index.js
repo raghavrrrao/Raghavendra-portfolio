@@ -111,7 +111,7 @@ document.querySelector("#contactForm").addEventListener("submit", (e) => {
     console.log("Encoded Message:", encodedMessage);
 
     // Prepare WhatsApp message
-    let whatsappMessage = `Hello, I have a new contact request:%0A%0A Name: ${encodedName}%0A Email: ${encodedEmail}%0A Subject: ${encodedSubject}%0A Message: ${encodedMessage}`;
+    let whatsappMessage = `Hello, I have a new contact request:%0A%0A Name: ${encodedName}%0A%0A Email: ${encodedEmail}%0A%0A Subject: ${encodedSubject}%0A%0A Message: ${encodedMessage}`;
 
     // WhatsApp URL with pre-filled message
     let whatsappURL = `https://wa.me/918879300301?text=${whatsappMessage}`;  // Replace with your number
