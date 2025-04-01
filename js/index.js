@@ -120,6 +120,47 @@ document.querySelector("#contactForm").addEventListener("submit", (e) => {
     window.open(whatsappURL, "_blank");
 });
 
+// Theme Toggle Functionality
+const themeToggle = document.getElementById('theme-toggle');
+const themeIcon = themeToggle.querySelector('i');
+
+// Function to set theme with transition
+function setTheme(theme) {
+    document.documentElement.style.transition = 'background-color 0.3s ease, color 0.3s ease';
+    document.documentElement.setAttribute('data-theme', theme);
+    localStorage.setItem('theme', theme);
+
+    if (theme === 'light') {
+        themeIcon.classList.replace('fa-moon', 'fa-sun');
+    } else {
+        themeIcon.classList.replace('fa-sun', 'fa-moon');
+    }
+
+    // Remove transition after it's done to avoid weird effects during scroll
+    setTimeout(() => {
+        document.documentElement.style.transition = 'none';
+    }, 300);
+}
+
+// Check for saved theme preference or use preferred color scheme
+const savedTheme = localStorage.getItem('theme') || window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+setTheme(savedTheme);
+
+// Theme toggle click handler
+themeToggle.addEventListener('click', () => {
+    const currentTheme = document.documentElement.getAttribute('data-theme');
+    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+    setTheme(newTheme);
+});
+
+// Watch for system theme changes
+window.matchMedia('(prefers-color-scheme: light)').addEventListener('change', e => {
+    if (!localStorage.getItem('theme')) { // Only if user hasn't set a preference
+        setTheme(e.matches ? 'light' : 'dark');
+    }
+});
+
+
 
 
 

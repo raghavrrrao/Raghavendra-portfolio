@@ -56,6 +56,123 @@ a:hover {
     padding: 0 1rem;
 }
 
+/* Add these to your main.css file */
+
+/* Theme Toggle Button */
+.theme-toggle {
+    position: fixed;
+    bottom: 5rem;
+    right: 2rem;
+    background-color: var(--primary-color);
+    color: var(--dark-color);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    opacity: 1;
+    transition: var(--transition);
+    z-index: 100;
+    border-width: 0px;
+}
+
+
+/* Updated Light Theme Variables */
+[data-theme="light"] {
+    --primary-color: #2a9d8f; /* Slightly darker for better contrast */
+    --secondary-color: #3a86ff;
+    --accent-color: #ff9f1c;
+    --text-color: #333333; /* Dark gray for readability */
+    --light-color: #ffffff;
+    --dark-color: #f8f9fa; /* Very light gray */
+    --background-color: #ffffff;
+    --card-color: #ffffff; /* White cards */
+    --border-color: #e0e0e0;
+    --box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Ensure text is visible in light theme */
+[data-theme="light"] h1,
+[data-theme="light"] h2,
+[data-theme="light"] h3,
+[data-theme="light"] h4,
+[data-theme="light"] .section-title,
+[data-theme="light"] .hero-name,
+[data-theme="light"] .hero-role,
+[data-theme="light"] .info-title,
+[data-theme="light"] .timeline-title,
+[data-theme="light"] .contact-item,
+[data-theme="light"] .education-degree {
+    color: #222222; /* Darker for headings */
+}
+
+[data-theme="light"] .hero-description,
+[data-theme="light"] p,
+[data-theme="light"] .timeline-company,
+[data-theme="light"] .education-school,
+[data-theme="light"] .education-grade,
+[data-theme="light"] .timeline-date,
+[data-theme="light"] .project-role {
+    color: #444444; /* Slightly lighter than headings but still visible */
+}
+
+/* Update card styles for light theme */
+[data-theme="light"] .project-card,
+[data-theme="light"] .project-card,
+[data-theme="light"] .skill-card,
+[data-theme="light"] .timeline-content,
+[data-theme="light"] .education-card,
+[data-theme="light"] .btn1,
+[data-theme="light"] .contact-form {
+    background-color: var(--card-color);
+    border: 1px solid var(--border-color);
+    box-shadow: var(--box-shadow);
+}
+
+/* Update hover effects for light theme */
+[data-theme="light"] .project-card:hover,
+[data-theme="light"] .skill-card:hover,
+[data-theme="light"] .timeline-content:hover,
+[data-theme="light"] .education-card:hover,
+[data-theme="light"] .contact-item:hover {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+    transform: translateY(-3px);
+}
+
+/* Update link colors for better visibility */
+[data-theme="light"] a,
+[data-theme="light"] .nav-link,
+[data-theme="light"] .footer-link {
+    color: var(--primary-color);
+}
+
+[data-theme="light"] a:hover,
+[data-theme="light"] .nav-link:hover,
+[data-theme="light"] .footer-link:hover {
+    color: var(--secondary-color);
+}
+
+/* Update form elements */
+[data-theme="light"] .form-control {
+    background-color: var(--light-color);
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
+}
+
+[data-theme="light"] .form-control:focus {
+    box-shadow: 0 0 0 3px rgba(42, 157, 143, 0.2);
+}
+
+/* Update skill progress bars */
+[data-theme="light"] .skill-level {
+    background-color: #e0e0e0;
+}
+
+[data-theme="light"] .skill-progress {
+    background-color: var(--primary-color);
+}
 .section {
     padding: 5rem 0;
 }
@@ -93,6 +210,27 @@ a:hover {
 }
 
 .btn:hover {
+    background-color: var(--secondary-color);
+    color: var(--dark-color);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.btn1 {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    background-color: var(--primary-color);
+    color: var(--dark-color);
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: var(--transition);
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.btn1:hover {
     background-color: var(--secondary-color);
     color: var(--dark-color);
     transform: translateY(-3px);
@@ -246,7 +384,7 @@ header.sticky {
     width: 25px;
     height: 3px;
     margin: 5px auto;
-    background-color: var(--text-color);
+    background-color: white;
     transition: var(--transition);
 }
 
@@ -674,9 +812,7 @@ header.sticky {
 
 /* Contact Section */
 .contact {
-    background: linear-gradient(135deg,
-            rgba(26, 26, 26, 0.9),
-            rgba(18, 18, 18, 1));
+    background-color: var(--background-color)
 }
 
 .contact-container {
@@ -876,6 +1012,13 @@ footer {
     .hamburger.active .bar:nth-child(3) {
         transform: translateY(-8px) rotate(-45deg);
     }
+    .theme-toggle {
+        display: none;
+    }
+    
+    .hamburger {
+        margin-left: auto;
+    }
 
     .nav-menu {
         position: fixed;
@@ -907,7 +1050,11 @@ footer {
         font-size: 1.5rem;
     }
 }
-
+@media (min-width: 769px) {
+    .theme-toggle {
+        display: flex;
+    }
+}
 @media (max-width: 576px) {
     .personal-info {
         grid-template-columns: 1fr;
