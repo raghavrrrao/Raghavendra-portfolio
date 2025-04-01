@@ -124,11 +124,22 @@ a:hover {
 [data-theme="light"] .skill-card,
 [data-theme="light"] .timeline-content,
 [data-theme="light"] .education-card,
-[data-theme="light"] .btn1,
+
 [data-theme="light"] .contact-form {
     background-color: var(--card-color);
     border: 1px solid var(--border-color);
     box-shadow: var(--box-shadow);
+}
+
+[data-theme="light"] .btn1{
+    background-color: var(--primary-color);
+    color: var(--dark-color);
+    border: 1px solid var(--border-color);
+}
+[data-theme="light"] .btn1:hover{
+    background-color: var(--primary-color);
+    color: var(--dark-color);
+    border: 1px solid var(--border-color);
 }
 
 /* Update hover effects for light theme */
