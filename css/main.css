@@ -723,7 +723,7 @@ textarea.form-control {
     position: relative;
     /* right: 12rem; */
     /* top: 50%; */
-    /* transform: translateY(-50%); */
+    transform: translateY(-0%);
     width: 400px;
     height: 70vh;
     overflow: hidden;
@@ -731,7 +731,6 @@ textarea.form-control {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 2rem;
     z-index: 5;
 }
 
@@ -754,12 +753,9 @@ textarea.form-control {
     width: 100%;
 }
 
-.showcase-item .project-content {
-    padding: 1rem;
-}
 
 .showcase-item .project-links {
-    margin-top: 0.5rem;
+    margin-top: 1rem;
 }
 
 .showcase-item .project-link {

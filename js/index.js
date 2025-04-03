@@ -179,7 +179,7 @@ function initProjectShowcase() {
 
     function updateShowcase() {
         items.forEach((item, index) => {
-            const offset = (index - currentIndex) * 100;
+            const offset = (index - currentIndex) * 102;
             item.style.transform = `translateY(${offset}%)`;
             item.style.opacity = index === currentIndex ? '1' : '0.5';
         });
