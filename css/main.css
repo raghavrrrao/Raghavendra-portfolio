@@ -6,7 +6,14 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+@font-face {
+    font-family: "Bricolage_bold";
+    src: url("fonts/BricolageGrotesque-Bold.ttf") format("woff2");
+    font-weight: normal;
+    font-style: normal;
 }
 
 html {
@@ -44,7 +51,11 @@ body {
 /* === TYPOGRAPHY === */
 /* ====================== */
 
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
+    font-family: "Bricolage_Bold";
     font-weight: 700;
     line-height: 1.2;
     margin-bottom: 1rem;
@@ -56,6 +67,7 @@ h1 {
 }
 
 h2 {
+    font-family: "Bricolage_Bold";
     font-size: clamp(1.5rem, 4vw, 2.5rem);
 }
 
@@ -96,6 +108,7 @@ a:hover {
 }
 
 .section-title {
+    font-family: "Bricolage_Bold";
     text-align: center;
     margin-bottom: 3rem;
     position: relative;
@@ -119,7 +132,8 @@ a:hover {
 /* === BUTTONS === */
 /* ====================== */
 
-.btn, .btn1 {
+.btn,
+.btn1 {
     display: inline-block;
     padding: 0.8rem 1.5rem;
     background-color: var(--primary-color);
@@ -134,7 +148,8 @@ a:hover {
     letter-spacing: 1px;
 }
 
-.btn:hover, .btn1:hover {
+.btn:hover,
+.btn1:hover {
     color: #fff;
     background-color: var(--secondary-color);
     transform: translateY(-2px);
@@ -408,7 +423,9 @@ header {
 .skill-progress {
     height: 100%;
     border-radius: 10px;
-    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+    background: linear-gradient(90deg,
+            var(--primary-color),
+            var(--secondary-color));
     width: 0;
     transition: width 1.5s ease-out;
 }
@@ -753,7 +770,6 @@ textarea.form-control {
     width: 100%;
 }
 
-
 .showcase-item .project-links {
     margin-top: 1rem;
 }
@@ -798,6 +814,10 @@ textarea.form-control {
     #hero .container {
         display: grid;
         grid-template-columns: 1fr;
+    }
+
+    .timeline-item:nth-child(even)::after {
+        left: 18px;
     }
 
     .project-showcase {
