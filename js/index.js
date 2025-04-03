@@ -5,7 +5,7 @@ const hamburger = document.querySelector('.hamburger');
 const navMenu = document.querySelector('.nav-menu');
 const scrollTopBtn = document.querySelector('.scroll-top');
 const themeToggle = document.getElementById('theme-toggle');
-const themeIcon = themeToggle.querySelector('i');
+// const themeIcon = themeToggle.querySelector('i');
 const contactForm = document.querySelector("#contactForm");
 
 // ======================
@@ -54,25 +54,25 @@ function initScrollTop() {
 // ======================
 // === THEME TOGGLE ===
 // ======================
-function initThemeToggle() {
-    function setTheme(theme) {
-        document.documentElement.setAttribute('data-theme', theme);
-        localStorage.setItem('theme', theme);
-        themeIcon.classList.toggle('fa-moon', theme === 'dark');
-        themeIcon.classList.toggle('fa-sun', theme === 'light');
-    }
+// function initThemeToggle() {
+//     function setTheme(theme) {
+//         document.documentElement.setAttribute('data-theme', theme);
+//         localStorage.setItem('theme', theme);
+//         themeIcon.classList.toggle('fa-moon', theme === 'dark');
+//         themeIcon.classList.toggle('fa-sun', theme === 'light');
+//     }
 
-    // Initialize theme
-    const savedTheme = localStorage.getItem('theme') || 'dark';
-    setTheme(savedTheme);
+//     // Initialize theme
+//     const savedTheme = localStorage.getItem('theme') || 'dark';
+//     setTheme(savedTheme);
 
-    // Theme toggle handler
-    themeToggle.addEventListener('click', () => {
-        const currentTheme = document.documentElement.getAttribute('data-theme');
-        const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-        setTheme(newTheme);
-    });
-}
+//     // Theme toggle handler
+//     themeToggle.addEventListener('click', () => {
+//         const currentTheme = document.documentElement.getAttribute('data-theme');
+//         const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+//         setTheme(newTheme);
+//     });
+// }
 
 // ======================
 // === SKILLS ANIMATION ===
@@ -264,7 +264,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initMobileMenu();
     initStickyHeader();
     initScrollTop();
-    initThemeToggle();
+    // initThemeToggle();
     initSkillsAnimation();
     initScrollAnimations();
     initScrollProgress();
