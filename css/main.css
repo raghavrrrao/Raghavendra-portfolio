@@ -1254,3 +1254,148 @@ footer {
         grid-template-columns: 1fr;
     }
 }
+
+/* Specific adjustments for 375px and below */
+@media (max-width: 375px) {
+    .hero-name {
+        font-size: 2.2rem;
+    }
+
+    .hero-role {
+        font-size: 1.3rem;
+    }
+
+    .hero-greeting {
+        font-size: 1.1rem;
+    }
+
+    .nav-item {
+        margin: 0.8rem 0;
+    }
+
+    .logo {
+        font-size: 1.3rem;
+    }
+
+    .bar {
+        width: 22px;
+        height: 2px;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(7px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-7px) rotate(-45deg);
+    }
+
+    .skill-card {
+        padding: 1.5rem;
+    }
+
+    .project-content {
+        padding: 1.2rem;
+    }
+
+    .contact-form {
+        padding: 1.5rem;
+    }
+
+    .form-control {
+        padding: 0.7rem;
+    }
+
+    .footer-nav {
+        gap: 1rem;
+    }
+
+    .footer-link {
+        font-size: 12px;
+    }
+
+    .hero-content {
+        position: relative;
+        z-index: 10;
+        max-width: 800px;
+        margin-top: 165px;
+    }
+}
+
+/* Specific adjustments for 320px and below */
+@media (max-width: 320px) {
+    .hero-name {
+        font-size: 2rem;
+    }
+
+    .hero-role {
+        font-size: 1.2rem;
+    }
+
+    .hero-greeting {
+        font-size: 1rem;
+    }
+
+    .btn,
+    .btn1 {
+        padding: 0.7rem 1.2rem;
+        font-size: 0.8rem;
+    }
+
+    .section-title {
+        font-size: 1.5rem;
+    }
+
+    .section-title:after {
+        width: 40px;
+        height: 2px;
+    }
+
+    .project-link {
+        font-size: 0.8rem;
+    }
+
+    .timeline-date,
+    .timeline-company {
+        font-size: 0.8rem;
+    }
+
+    .footer-logo {
+        font-size: 1.3rem;
+    }
+
+    .footer-nav {
+        gap: 0.8rem;
+    }
+
+    .footer-link {
+        font-size: 10.5px;
+    }
+
+    .copyright {
+        font-size: 0.8rem;
+    }
+
+    .scroll-top {
+        width: 35px;
+        height: 35px;
+        bottom: 1.5rem;
+        right: 1.5rem;
+    }
+
+    .particles-container {
+        display: none;
+    }
+
+    .contact-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(276px, 1fr));
+        gap: 2rem;
+    }
+
+    .projects-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(275px, 1fr));
+        gap: 2rem;
+    }
+}
