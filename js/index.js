@@ -161,7 +161,7 @@ function initParticles() {
 // === PROJECT SHOWCASE ===
 function initProjectShowcase() {
     const heroSection = document.querySelector('#hero .container');
-    const projects = Array.from(document.querySelectorAll('.project-card')).slice(0, 5);
+    const projects = Array.from(document.querySelectorAll('.project-card')).slice(0, 7);
 
     const showcase = document.createElement('div');
     showcase.className = 'project-showcase';
