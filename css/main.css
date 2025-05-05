@@ -1253,6 +1253,13 @@ footer {
     .education-cards {
         grid-template-columns: 1fr;
     }
+    .footer-nav {
+        gap: 10px;
+    }
+
+    .footer-link {
+        font-size: 12px;
+    }
 }
 
 /* Specific adjustments for 375px and below */
@@ -1307,7 +1314,7 @@ footer {
     }
 
     .footer-nav {
-        gap: 1rem;
+        gap: 10px;
     }
 
     .footer-link {
