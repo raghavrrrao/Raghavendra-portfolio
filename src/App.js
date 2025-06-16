@@ -37,9 +37,9 @@ function App() {
         forceAnimate: true,
         pixelRatio: window.devicePixelRatio || 1,
 
-        waveSpeed: 0.3,
-        waveHeight: 15,
-        shininess: 30,
+        waveSpeed: 2,
+        waveHeight: 20,
+        shininess: 50,
         zoom: 0.85,
         distortion: 3.5,
         distortionSpeed: 0.8,

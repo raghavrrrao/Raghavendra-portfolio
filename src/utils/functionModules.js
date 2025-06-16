@@ -284,22 +284,29 @@ export async function initContactForm() {
         </div>
     `;
 
-        const container = document.querySelector('.notification-container');
+        let container = document.querySelector('.notification-container');
+
+        // Create it if missing
+        if (!container) {
+            container = document.createElement('div');
+            container.className = 'notification-container';
+            document.body.appendChild(container);
+        }
+
         container.appendChild(notification);
 
-        // Trigger the show animation
         setTimeout(() => {
             notification.classList.add('show');
         }, 10);
 
-        // Auto-hide after some time
         setTimeout(() => {
             notification.classList.remove('show');
             setTimeout(() => {
                 notification.remove();
-            }, 400); // Match this with your transition duration
+            }, 400);
         }, 5000);
     }
+
 
     contactForm.addEventListener("submit", async (e) => {
         e.preventDefault();

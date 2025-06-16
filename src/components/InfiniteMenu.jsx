@@ -491,7 +491,7 @@ class ArcballControl {
 
 class InfiniteGridMenu {
     TARGET_FRAME_DURATION = 1000 / 60;
-    SPHERE_RADIUS = 2;
+    SPHERE_RADIUS = 1.9;
 
     #time = 0;
     #deltaTime = 0;
@@ -524,6 +524,10 @@ class InfiniteGridMenu {
         this.onActiveItemChange = onActiveItemChange || (() => { });
         this.onMovementChange = onMovementChange || (() => { });
         this.#init(onInit);
+
+        this.camera.position = vec3.fromValues(0, 0, 2.8); // ✅ Safe here, after #init()
+
+        this.#updateCameraMatrix(); // Also re-update view matrix after position change
     }
 
     resize() {
@@ -588,7 +592,7 @@ class InfiniteGridMenu {
             uAtlasSize: gl.getUniformLocation(this.discProgram, 'uAtlasSize'),
         };
 
-        this.discGeo = new RectangleGeometry(3.0, 2.0); // double the previous size
+        this.discGeo = new RectangleGeometry(2.5, 1.5); // double the previous size
 
 
         this.discBuffers = this.discGeo.data;
@@ -691,8 +695,8 @@ class InfiniteGridMenu {
         this.control.update(deltaTime, this.TARGET_FRAME_DURATION);
 
         let positions = this.instancePositions.map((p) => vec3.transformQuat(vec3.create(), p, this.control.orientation));
-        const scale = 0.25;
-        const SCALE_INTENSITY = 0.6;
+        const scale = 0.3; // Increased from 0.25
+        const SCALE_INTENSITY = 0.7; // Increased from 0.6
         positions.forEach((p, ndx) => {
             const s = (Math.abs(p[2]) / this.SPHERE_RADIUS) * SCALE_INTENSITY + (1 - SCALE_INTENSITY);
             const finalScale = s * scale;
@@ -828,7 +832,7 @@ class InfiniteGridMenu {
     }
 }
 class RectangleGeometry extends Geometry {
-    constructor(width = 20, height = 0.8) {
+    constructor(width = 1.8, height = 0.7) { // Reduced from width=2.0, height=0.8 {
         super();
         const hw = width / 2;
         const hh = height / 2;
