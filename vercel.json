@@ -1,0 +1,8 @@
+{
+    "functions": {
+        "api/ping.js": {
+        "runtime": "edge",
+        "schedule": "@every 2d"
+        }
+    }
+}
