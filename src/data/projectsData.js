@@ -20,7 +20,7 @@ const projectsData = [
         image: "images/noopur-portfolio-preview.png",
         role: "Developed by Me",
         description: "Personal portfolio website for Graphic Designer Noopur Ghorpade.",
-        link: "https://noopurghorpade.github.io/",
+        link: "https://noopurghorpade.in/",
         handled: true
     },
     {
