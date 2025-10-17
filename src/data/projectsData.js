@@ -3,7 +3,7 @@ const projectsData = [
         title: "Crystal EMR",
         image: "images/crystal-preview.png",
         role: "Designed & Developed by Me",
-        description: "Comprehensive Electronic Medical Records system for healthcare providers.",
+        description: "Informative Website for a Comprehensive Electronic Medical Records system for healthcare providers.",
         link: "https://crystalemr.com/",
         handled: true
     },
@@ -21,6 +21,14 @@ const projectsData = [
         role: "Developed by Me",
         description: "Personal portfolio website for Graphic Designer Noopur Ghorpade.",
         link: "https://noopurghorpade.in/",
+        handled: true
+    },
+    {
+        title: "Sane Eye Hospital",
+        image: "images/Sane-eye-preview.png",
+        role: "Developed by Me",
+        description: "Informative website for Sane Eye Hospital.",
+        link: "https://www.saneeye.in/",
         handled: true
     },
     {
