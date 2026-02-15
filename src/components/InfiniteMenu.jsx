@@ -298,7 +298,7 @@ function makeVertexArray(gl, bufLocNumElmPairs, indices) {
 }
 
 function resizeCanvasToDisplaySize(canvas) {
-    const dpr = Math.min(1.9, window.devicePixelRatio);
+    const dpr = Math.min(2, window.devicePixelRatio);
     const displayWidth = Math.round(canvas.clientWidth * dpr);
     const displayHeight = Math.round(canvas.clientHeight * dpr);
     const needResize = canvas.width !== displayWidth || canvas.height !== displayHeight;
@@ -846,15 +846,15 @@ export default function InfiniteMenu({ items = [] }) {
     const canvasRef = useRef(null);
     const [activeItem, setActiveItem] = useState(null);
     const [isMoving, setIsMoving] = useState(false);
-    const handleActiveItem = (index) => {
-        const itemIndex = index % items.length;
-        setActiveItem(items[itemIndex]);
-    };
 
     useEffect(() => {
         const canvas = canvasRef.current;
         let sketch;
-        let observer;
+
+        const handleActiveItem = (index) => {
+            const itemIndex = index % items.length;
+            setActiveItem(items[itemIndex]);
+        };
 
         if (canvas) {
             sketch = new InfiniteGridMenu(
@@ -864,24 +864,21 @@ export default function InfiniteMenu({ items = [] }) {
                 setIsMoving,
                 (sk) => sk.run()
             );
-
-            observer = new IntersectionObserver(
-                ([entry]) => {
-                    if (!entry.isIntersecting) {
-                        sketch.control.isPointerDown = false;
-                    }
-                },
-                { threshold: 0.1 }
-            );
-
-            observer.observe(canvas);
         }
 
+        const handleResize = () => {
+            if (sketch) {
+                sketch.resize();
+            }
+        };
+
+        window.addEventListener('resize', handleResize);
+        handleResize();
+
         return () => {
-            if (observer) observer.disconnect();
+            window.removeEventListener('resize', handleResize);
         };
     }, [items]);
-
 
     const handleButtonClick = () => {
         if (!activeItem?.link) return;
