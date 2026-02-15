@@ -46,7 +46,7 @@ function Footer() {
                         className="copyright"
                         aria-label={`Copyright Raghavendra Rao ${new Date().getFullYear()}`}
                     >
-                        &copy; {new Date().getFullYear()} Raghavendra Rao. All rights reserved.
+                        &copy; 2024 Raghavendra Rao. All rights reserved.
                     </div>
                 </div>
             </div>
