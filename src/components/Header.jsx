@@ -1,5 +1,4 @@
-import React, { useEffect } from 'react';
-import { initMobileMenu } from '../utils/functionModules';
+
 import '../styles/main.css';
 
 function Header() {

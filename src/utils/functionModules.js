@@ -259,15 +259,6 @@ export async function renderProjects() {
     }
 }
 
-
-function sanitize(text) {
-    return text
-        .replace(/&/g, "&amp;")
-        .replace(/</g, "&lt;")
-        .replace(/>/g, "&gt;")
-        .replace(/"/g, "&quot;")
-        .replace(/'/g, "&#039;");
-}
 // === CONTACT FORM ===
 export async function initContactForm() {
     const contactForm = document.getElementById('contactForm');

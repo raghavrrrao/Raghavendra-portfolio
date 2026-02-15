@@ -1,9 +1,8 @@
-import React from 'react';
 import projectsData from '../data/projectsData'; // Adjust the path if needed
 
 function Projects() {
     return (
-        <section id="projects" className="project-container" role="region" aria-label="Projects Section">
+        <section id="projects" className="project-container" aria-label="Projects Section">
             <h2 className="section-title">My Projects</h2>
 
             <div className="projects-list">

@@ -1,11 +1,8 @@
-import React from 'react';
-
 function Skills() {
     return (
         <section
             id="skills"
             className="skills section"
-            role="region"
             aria-label="Skills Section"
         >
             <div className="container">
