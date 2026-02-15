@@ -1,7 +1,0 @@
-{
-    "functions": {
-        "api/ping.js": {
-        "runtime": "edge"
-        }
-    }
-}
