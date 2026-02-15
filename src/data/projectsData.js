@@ -9,7 +9,7 @@ const projectsData = [
     },
     {
         title: " Sane Eye Hospital",
-        image: "/images/sane-eye-preview.png",
+        image: "/images/Sane-eye-preview.png",
         role: "Designed & Developed by Me",
         description: "Website for Sane Eye Hospital, providing information about their services, doctors, and patient resources.",
         link: "https://www.saneeye.in/",
