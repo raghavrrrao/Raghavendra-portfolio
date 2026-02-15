@@ -1763,6 +1763,7 @@ footer {
         align-items: center;
         justify-content: center;
         z-index: 5;
+        display: none;
     }
 
     .timeline-item:nth-child(even)::after {
