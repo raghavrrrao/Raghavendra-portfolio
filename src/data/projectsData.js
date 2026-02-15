@@ -1,7 +1,7 @@
 const projectsData = [
     {
         title: "Crystal EMR",
-        image: "images/crystal-preview.png",
+        image: "/images/crystal-preview.png",
         role: "Designed & Developed by Me",
         description: "Informative Website for a Comprehensive Electronic Medical Records system for healthcare providers.",
         link: "https://crystalemr.com/",
@@ -9,7 +9,7 @@ const projectsData = [
     },
     {
         title: "Sane Eye Hospital",
-        image: "images/sane-eye-preview.png",
+        image: "/images/sane-eye-preview.png",
         role: "Designed & Developed by Me",
         description: "Website for Sane Eye Hospital, providing information about their services, doctors, and patient resources.",
         link: "https://www.saneeye.in/",
@@ -17,7 +17,7 @@ const projectsData = [
     },
     {
         title: "Tantshilpa",
-        image: "images/tantshilpa-preview.png",
+        image: "/images/tantshilpa-preview.png",
         role: "Designed & Developed by Me",
         description: "E-commerce platform for traditional handloom products and sarees.",
         link: "https://tantshilpa.com/",
@@ -25,23 +25,15 @@ const projectsData = [
     },
     {
         title: "Noopur Ghorpade",
-        image: "images/noopur-portfolio-preview.png",
+        image: "/images/noopur-portfolio-preview.png",
         role: "Developed by Me",
         description: "Personal portfolio website for Graphic Designer Noopur Ghorpade.",
         link: "https://noopurghorpade.in/",
         handled: true
     },
     {
-        title: "Sane Eye Hospital",
-        image: "images/Sane-eye-preview.png",
-        role: "Developed by Me",
-        description: "Informative website for Sane Eye Hospital.",
-        link: "https://www.saneeye.in/",
-        handled: true
-    },
-    {
         title: "Anuradha Pal",
-        image: "images/anuradhaPal-preview.png",
+        image: "/images/anuradhaPal-preview.png",
         role: "Developed by Me (Designed By Hemant Phanse.)",
         description: "Website for an international Table Maestro.",
         note: "Isn't being handled by me now.",
@@ -50,7 +42,7 @@ const projectsData = [
     },
     {
         title: "RedVinca",
-        image: "images/redvinca-preview.png",
+        image: "/images/redvinca-preview.png",
         role: "Developed by Me (Designed By Hemant Phanse.)",
         description: "Website for a IT Tech Company.",
         note: "Isn't being handled by me now.",
@@ -59,7 +51,7 @@ const projectsData = [
     },
     {
         title: "Amps 2024",
-        image: "images/amps-preview.png",
+        image: "/images/amps-preview.png",
         role: "Developed by Me",
         description: "Website for AMPS - Abhiman Mitra Parivar Sanstha 2024 (Webkrida)",
         link: "https://webkrida.com/amps-2024/",
@@ -67,7 +59,7 @@ const projectsData = [
     },
     {
         title: "Jyoti CSC",
-        image: "images/jyoti-csc-preview.png",
+        image: "/images/jyoti-csc-preview.png",
         role: "Developed by Me",
         description: "Website for Jyoti CSC Digital Services (Webkrida)",
         link: "https://webkrida.com/jyoti-csc/",
