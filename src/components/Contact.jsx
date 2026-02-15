@@ -13,7 +13,7 @@ function Contact() {
 
         try {
             const response = await fetch(
-                "https://formspree.io/f/mvzabwyw",
+                "https://formspree.io/f/mvzbawwv",
                 {
                     method: "POST",
                     body: formData,
