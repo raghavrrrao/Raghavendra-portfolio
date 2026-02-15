@@ -12,6 +12,9 @@ import Contact from './components/Contact';
 import Footer from './components/Footer';
 import InfiniteMenu from './components/InfiniteMenu';
 import projectsData from './data/projectsData';
+import Certifications from "./components/Certifications";
+import Resume from "./components/Resume";
+
 import * as fm from './utils/functionModules';
 
 function App() {
@@ -97,6 +100,8 @@ function App() {
             </div>
           </section>
         )}
+        <Certifications />
+        <Resume />
         <Experience />
         <Education />
         <Contact />
