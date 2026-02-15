@@ -63,7 +63,6 @@ function App() {
     fm.initSkillsAnimation();
     fm.initScrollAnimations();
     fm.initScrollProgress();
-    fm.initContactForm();
     fm.initButtonEffects();
     fm.initHeroAnimations();
     fm.initGlareHover();
@@ -74,8 +73,6 @@ function App() {
       glowColor: 'rgba(0, 0, 255, 0.5)',
       animationDuration: 0.4
     });
-    fm.renderProjects();
-    fm.initProjectShowcase();
 
     return () => {
       if (window.vantaEffect) window.vantaEffect.destroy();

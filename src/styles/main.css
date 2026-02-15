@@ -1219,7 +1219,7 @@ textarea.form-control {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
     transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
     position: absolute;
-    opacity: 0.5;
+    opacity: 1;
 }
 
 .showcase-item .project-image {
