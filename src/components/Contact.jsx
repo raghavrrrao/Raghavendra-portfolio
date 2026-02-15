@@ -5,37 +5,34 @@ function Contact() {
     const [status, setStatus] = useState(null);
 
     const handleSubmit = async (e) => {
-    e.preventDefault();
-    setLoading(true);
-    setStatus(null);
+        e.preventDefault();
+        setLoading(true);
+        setStatus(null);
 
-    const formData = new FormData(e.target);
+        const formData = new FormData(e.target);
 
-    try {
-        const response = await fetch(
-            "https://formspree.io/f/mvzabwyw",
-            {
-                method: "POST",
-                body: formData,
-                headers: {
-                    Accept: "application/json"
+        try {
+            const response = await fetch(
+                "https://formspree.io/f/mvzabwyw",
+                {
+                    method: "POST",
+                    body: formData,
+                    headers: { Accept: "application/json" }
                 }
-            }
-        );
+            );
 
-        if (response.ok) {
-            setStatus("success");
-            e.target.reset();
-        } else {
+            if (response.ok) {
+                setStatus("success");
+                e.target.reset();
+            } else {
+                setStatus("error");
+            }
+        } catch {
             setStatus("error");
         }
-    } catch (error) {
-        setStatus("error");
-    }
 
-    setLoading(false);
-};
-
+        setLoading(false);
+    };
 
     return (
         <section id="contact" className="contact section">
@@ -44,47 +41,71 @@ function Contact() {
 
                 <div className="contact-container">
 
+                    {/* Contact Info */}
+                    <div className="contact-info">
+                        <div className="contact-item">
+                            <div className="contact-icon"><i className="fas fa-envelope"></i></div>
+                            <div>
+                                <h3>Email</h3>
+                                <p><a href="mailto:raoraghav28@gmail.com">raoraghav28@gmail.com</a></p>
+                            </div>
+                        </div>
+
+                        <div className="contact-item">
+                            <div className="contact-icon"><i className="fas fa-phone"></i></div>
+                            <div>
+                                <h3>Phone</h3>
+                                <p>+91 8879300301</p>
+                            </div>
+                        </div>
+
+                        <div className="contact-item">
+                            <div className="contact-icon"><i className="fas fa-map-marker-alt"></i></div>
+                            <div>
+                                <h3>Location</h3>
+                                <p>Mumbai, Maharashtra, India</p>
+                            </div>
+                        </div>
+
+                        <div className="contact-item">
+                            <div className="contact-icon"><i className="fab fa-linkedin"></i></div>
+                            <div>
+                                <h3>LinkedIn</h3>
+                                <p>
+                                    <a
+                                        href="https://www.linkedin.com/in/raghavendra-rao-794112200/"
+                                        target="_blank"
+                                        rel="noreferrer"
+                                    >
+                                        Raghavendra Rao
+                                    </a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* Contact Form */}
                     <div className="contact-form">
                         <form onSubmit={handleSubmit}>
 
                             <div className="form-group">
-                                <input
-                                    type="text"
-                                    name="name"
-                                    className="form-control"
-                                    placeholder="Your Name"
-                                    required
-                                />
+                                <input type="text" name="name" className="form-control" placeholder="Your Name" required />
                             </div>
 
                             <div className="form-group">
-                                <input
-                                    type="email"
-                                    name="email"
-                                    className="form-control"
-                                    placeholder="Your Email"
-                                    required
-                                />
+                                <input type="email" name="email" className="form-control" placeholder="Your Email" required />
                             </div>
 
                             <div className="form-group">
-                                <input
-                                    type="text"
-                                    name="subject"
-                                    className="form-control"
-                                    placeholder="Subject"
-                                    required
-                                />
+                                <input type="text" name="subject" className="form-control" placeholder="Subject" required />
                             </div>
 
                             <div className="form-group">
-                                <textarea
-                                    name="message"
-                                    className="form-control"
-                                    placeholder="Your Message"
-                                    required
-                                />
+                                <textarea name="message" className="form-control" placeholder="Your Message" required></textarea>
                             </div>
+
+                            {/* Honeypot */}
+                            <input type="text" name="website" style={{ display: "none" }} />
 
                             <button type="submit" className="btn" disabled={loading}>
                                 {loading ? "Sending..." : "Send Message"}
