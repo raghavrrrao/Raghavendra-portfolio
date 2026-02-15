@@ -697,6 +697,7 @@ class InfiniteGridMenu {
         gl.useProgram(this.discProgram);
 
         gl.enable(gl.CULL_FACE);
+        gl.frontFace(gl.CCW);
         gl.enable(gl.DEPTH_TEST);
 
         gl.clearColor(0, 0, 0, 0);
