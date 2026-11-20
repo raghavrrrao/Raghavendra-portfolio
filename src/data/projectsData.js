@@ -57,7 +57,7 @@ const projectsData = [
     {
         type: "client",
         title: "Crystal EMR",
-        image: "/images/crystal-preview.png",
+        image: "/images/Projects/Client_Websites/crystal/crystal-preview.png",
         role: "Designed & Developed by Me",
         description: "Informative website for a comprehensive Electronic Medical Records system for healthcare providers.",
         link: "https://crystalemr.com/",
@@ -66,7 +66,7 @@ const projectsData = [
     {
         type: "client",
         title: "Sane Eye Hospital",
-        image: "/images/Sane-eye-preview.png",
+        image: "/images/Projects/Client_Websites/saneeye/Sane-eye-preview.png",
         role: "Designed & Developed by Me",
         description: "Website for Sane Eye Hospital, providing information about their services, doctors, and patient resources.",
         link: "https://www.saneeye.in/",
@@ -75,7 +75,7 @@ const projectsData = [
     {
         type: "client",
         title: "Tantshilpa",
-        image: "/images/tantshilpa-preview.png",
+        image: "/images/Projects/Client_Websites/tantashilpa/tantshilpa-preview.png",
         role: "Designed & Developed by Me",
         description: "E-commerce platform for traditional handloom products and sarees.",
         link: "https://tantshilpa.com/",
@@ -84,7 +84,7 @@ const projectsData = [
     {
         type: "client",
         title: "Noopur Ghorpade",
-        image: "/images/noopur-portfolio-preview.png",
+        image: "/images/Projects/Client_Websites/noopur-portfolio/noopur-portfolio-preview.png",
         role: "Developed by Me",
         description: "Personal portfolio website for Graphic Designer Noopur Ghorpade.",
         link: "https://noopurghorpade.in/",
@@ -93,7 +93,7 @@ const projectsData = [
     {
         type: "client",
         title: "Anuradha Pal",
-        image: "/images/anuradhaPal-preview.png",
+        image: "/images/Projects/Client_Websites/anuradhapal/anuradhaPal-preview.png",
         role: "Developed by Me (Designed by Hemant Phanse)",
         description: "Website for an international tabla maestro.",
         note: "Isn't being handled by me now.",
@@ -103,7 +103,7 @@ const projectsData = [
     {
         type: "client",
         title: "RedVinca",
-        image: "/images/redvinca-preview.png",
+        image: "/images/Projects/Client_Websites/redvinca/redvinca-preview.png",
         role: "Developed by Me (Designed by Hemant Phanse)",
         description: "Website for an IT tech company.",
         note: "Isn't being handled by me now.",
@@ -113,7 +113,7 @@ const projectsData = [
     {
         type: "client",
         title: "AMPS 2024",
-        image: "/images/amps-preview.png",
+        image: "/images/Projects/Client_Websites/amps/amps-preview.png",
         role: "Developed by Me",
         description: "Website for AMPS – Abhiman Mitra Parivar Sanstha 2024 (Webkrida).",
         link: "https://webkrida.com/amps-2024/",
@@ -122,7 +122,7 @@ const projectsData = [
     {
         type: "client",
         title: "Jyoti CSC Digital Services",
-        image: "/images/jyoti-csc-preview.png",
+        image: "/images/Projects/Client_Websites/jyoticsc/jyoti-csc-preview.png",
         role: "Developed by Me",
         description: "Website for Jyoti CSC Digital Services (Webkrida).",
         link: "https://webkrida.com/jyoti-csc/",
