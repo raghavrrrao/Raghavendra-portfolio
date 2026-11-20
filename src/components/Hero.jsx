@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import '../styles/main.css';
-import projectsData from '../data/projectsData';
+import { clientProjects } from '../data/projectsData';
+
+const techHighlights = ['React', 'JavaScript', 'Python', 'Node.js', 'SQL'];
 
 function Hero() {
     const [currentIndex, setCurrentIndex] = useState(0);
@@ -8,14 +10,15 @@ function Hero() {
     useEffect(() => {
         const interval = setInterval(() => {
             setCurrentIndex((prevIndex) =>
-                (prevIndex + 1) % projectsData.length
+                (prevIndex + 1) % clientProjects.length
             );
         }, 3000);
 
         return () => clearInterval(interval);
     }, []);
 
-    const currentProject = projectsData[currentIndex];
+    // The showcase card needs a screenshot, so it rotates through projects that have one
+    const currentProject = clientProjects[currentIndex];
 
     return (
         <section id="hero" className="hero">
@@ -24,24 +27,43 @@ function Hero() {
                 {/* LEFT SIDE - HERO TEXT */}
                 <div className="hero-content">
                     <p className="hero-greeting">Hello, I'm</p>
-                    <h1 className="hero-name">Raghav</h1>
-                    <h2 className="hero-role" id="myFocusText">Web Developer</h2>
+                    <h1 className="hero-name">Raghavendra Rao</h1>
+                    <h2 className="hero-role" id="myFocusText">Software Developer &amp; Full Stack Engineer</h2>
                     <p className="hero-description">
-                        Self-learner with a passion for web technologies. Experienced in designing,
-                        developing, and maintaining web applications, responsive pages, and email templates.
+                        Building web applications, backend systems and practical software solutions.
                     </p>
 
+                    <ul className="tag-list hero-tech" aria-label="Technology highlights">
+                        {techHighlights.map((tech) => (
+                            <li key={tech}>{tech}</li>
+                        ))}
+                    </ul>
+
                     <div className="hero-socials">
-                        <a href="mailto:raoraghav28@gmail.com" className="social-icon">
-                            <i className="fas fa-envelope"></i>
+                        <a
+                            href="mailto:raoraghav28@gmail.com"
+                            className="social-icon"
+                            aria-label="Email Raghavendra Rao"
+                        >
+                            <i className="fas fa-envelope" aria-hidden="true"></i>
                         </a>
                         <a
                             href="https://www.linkedin.com/in/raghavendra-rao-794112200/"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="social-icon"
+                            aria-label="LinkedIn profile of Raghavendra Rao"
                         >
-                            <i className="fab fa-linkedin"></i>
+                            <i className="fab fa-linkedin" aria-hidden="true"></i>
+                        </a>
+                        <a
+                            href="https://github.com/raghavrrrao"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="social-icon"
+                            aria-label="GitHub profile of Raghavendra Rao"
+                        >
+                            <i className="fab fa-github" aria-hidden="true"></i>
                         </a>
                     </div>
 

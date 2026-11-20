@@ -19,36 +19,28 @@ function About() {
 
                     {/* About Content */}
                     <div className="about-content" aria-label="About Raghavendra Rao">
-                        <h3>Web Developer & Technology Enthusiast</h3>
-
-                        <div className="about-objective">
-                            <h4>Career Objective</h4>
-                            <p>
-                                To secure a challenging and rewarding position in a growth-oriented organization that
-                                provides opportunities for career advancement.
-                            </p>
-                        </div>
+                        <h3>Software Developer &amp; Full Stack Engineer</h3>
 
                         <div className="about-info">
                             <p>
-                                I am a self-learner with a passion for web technologies. Since May 2023, I've been working
-                                with various web technologies, including HTML/HTML5, CSS, Bootstrap, JavaScript, ES6, and
-                                jQuery.
+                                I'm a software developer with two years of professional experience building and
+                                maintaining web applications and responsive client websites.
                             </p>
                             <p>
-                                I'm experienced in designing, developing, and maintaining web applications, responsive pages,
-                                and email templates. I'm proficient in the Bootstrap framework and well-versed in JavaScript
-                                methods. I'm committed to writing clean and maintainable code, and I'm enthusiastic about
-                                continuous learning and staying updated with the latest trends in web development.
+                                My experience spans frontend development, backend systems, database-driven applications
+                                and API development. I've worked with technologies including JavaScript, React, Node.js,
+                                Python, Django and SQL.
+                            </p>
+                            <p>
+                                Beyond professional work, I've built full-stack projects involving OCR-based compliance
+                                checking, interactive SQL investigations and project management systems. I'm currently
+                                pursuing my Master of Computer Applications (MCA) and continuously expanding my software
+                                engineering skills.
                             </p>
                         </div>
 
                         {/* Personal Info */}
                         <div className="personal-info" aria-label="Personal Information of Raghavendra Rao">
-                            <div className="info-item">
-                                <span className="info-title">Date of Birth:</span>
-                                <span>21 July 2002</span>
-                            </div>
                             <div className="info-item">
                                 <span className="info-title">Languages:</span>
                                 <span>Marathi, Hindi, English</span>
@@ -63,7 +55,7 @@ function About() {
                             </div>
                             <div className="info-item">
                                 <span className="info-title">Location:</span>
-                                <span>Mumbai, India</span>
+                                <span>Mumbai, Maharashtra, India</span>
                             </div>
                         </div>
                     </div>

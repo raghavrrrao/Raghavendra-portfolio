@@ -1,37 +1,23 @@
-import projectsData from '../data/projectsData'; // Adjust the path if needed
+import { softwareProjects, clientProjects } from '../data/projectsData';
+import ProjectCard from './ProjectCard';
 
+// Mobile projects list (desktop uses the grid + 3D menu in App.js)
 function Projects() {
     return (
         <section id="projects" className="project-container" aria-label="Projects Section">
             <h2 className="section-title">My Projects</h2>
 
+            <h3 className="projects-subtitle">Software Projects</h3>
             <div className="projects-list">
-                {projectsData.map((project, idx) => (
-                    <article className="project-card" key={idx} aria-labelledby={`project-title-${idx}`}>
-                        <img
-                            src={project.image}
-                            alt={`${project.title} preview`}
-                            className="project-image"
-                        />
+                {softwareProjects.map((project) => (
+                    <ProjectCard key={project.title} project={project} />
+                ))}
+            </div>
 
-                        <div className="project-content">
-                            <h3 id={`project-title-${idx}`}>{project.title}</h3>
-                            <p>{project.description}</p>
-
-                            <div className="project-links">
-                                <a
-                                    href={project.link}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="project-link"
-                                    aria-label={`Visit ${project.title} site`}
-                                >
-                                    <i className="fas fa-external-link-alt" aria-hidden="true"></i>
-                                    Visit Site
-                                </a>
-                            </div>
-                        </div>
-                    </article>
+            <h3 className="projects-subtitle">Client Websites</h3>
+            <div className="projects-list">
+                {clientProjects.map((project) => (
+                    <ProjectCard key={project.title} project={project} />
                 ))}
             </div>
         </section>

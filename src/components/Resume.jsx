@@ -10,8 +10,7 @@ function Resume() {
                     <div className="resume-content">
                         <h3>Raghavendra Rao</h3>
                         <p>
-                            Full Stack Developer with experience in Web Development,
-                            Database Systems, and Interactive UI Engineering.
+                            View my resume online or download it as a PDF.
                         </p>
 
                         <div className="resume-actions">

@@ -11,7 +11,8 @@ import Education from './components/Education';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import InfiniteMenu from './components/InfiniteMenu';
-import projectsData from './data/projectsData';
+import ProjectCard from './components/ProjectCard';
+import { softwareProjects, clientProjects } from './data/projectsData';
 import Certifications from "./components/Certifications";
 import Resume from "./components/Resume";
 
@@ -95,8 +96,19 @@ function App() {
         ) : (
           <section id="projects" className="infinite-projects-section">
             <h2 className="section-title">My Projects</h2>
+
+            <h3 className="projects-subtitle">Software Projects</h3>
+            <div className="container">
+              <div className="software-projects-grid">
+                {softwareProjects.map((project) => (
+                  <ProjectCard key={project.title} project={project} />
+                ))}
+              </div>
+            </div>
+
+            <h3 className="projects-subtitle">Client Websites</h3>
             <div style={{ backgroundColor: 'transparent', height: '100vh', width: '100vw' }}>
-              <InfiniteMenu items={projectsData} />
+              <InfiniteMenu items={clientProjects} />
             </div>
           </section>
         )}

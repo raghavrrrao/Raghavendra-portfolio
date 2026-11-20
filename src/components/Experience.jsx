@@ -8,43 +8,46 @@ function Experience() {
                 
                 <div className="timeline" role="list" aria-label="Professional experience timeline">
 
-                    <div className="timeline-item" role="listitem" aria-label="Junior Web Developer at Webkrida from May 2023 to Present">
+                    <div className="timeline-item" role="listitem" aria-label="Junior Web Developer at Webkrida, Mumbai, from May 2023 to May 2025">
                         <div className="timeline-content glare-hover">
-                            <div className="timeline-date" aria-label="Duration">May 2023 - Present</div>
+                            <div className="timeline-date" aria-label="Duration">May 2023 – May 2025</div>
                             <h3 className="timeline-title">Junior Web Developer</h3>
                             <div className="timeline-company">
                                 <a
                                     href="https://www.webkrida.com/"
                                     target="_blank"
-                                    rel="noreferrer"
+                                    rel="noopener noreferrer"
                                     aria-label="Webkrida website"
                                 >
                                     Webkrida
                                 </a>
+                                , Mumbai
                             </div>
-                            <p>
-                                Develop various responsive web pages and email templates using Bootstrap and grid layouts as
-                                per requirements. Implement required changes in existing or previously developed pages.
-                                Debug and resolve any issues occurring in JavaScript code.
-                            </p>
+                            <ul className="timeline-points">
+                                <li>Developed and maintained responsive client websites and HTML email templates.</li>
+                                <li>Implemented JavaScript functionality and reusable frontend logic.</li>
+                                <li>Debugged production JavaScript issues using Chrome DevTools.</li>
+                                <li>Worked with design and backend teams to deliver client requirements.</li>
+                                <li>Delivered AMPS 2024 and Jyoti CSC Digital Services websites.</li>
+                            </ul>
                         </div>
                     </div>
 
                     <div className="timeline-item" role="listitem" aria-label="Internship in Android App Development at Nutpam Technologies from October 2022 to November 2022">
                         <div className="timeline-content glare-hover">
-                            <div className="timeline-date" aria-label="Duration">October 2022 - November 2022</div>
-                            <h3 className="timeline-title">Android Application Development - Internship</h3>
+                            <div className="timeline-date" aria-label="Duration">October 2022 – November 2022</div>
+                            <h3 className="timeline-title">Android Application Development – Internship</h3>
                             <div className="timeline-company">
                                 <a
                                     href="https://www.linkedin.com/company/nutpamtech/"
                                     target="_blank"
-                                    rel="noreferrer"
+                                    rel="noopener noreferrer"
                                     aria-label="Nutpam Technologies LinkedIn page"
                                 >
                                     Nutpam Technologies
                                 </a>
                             </div>
-                            <p>Was taught basics of Application development using Android Studio.</p>
+                            <p>Was taught the basics of application development using Android Studio.</p>
                         </div>
                     </div>
 

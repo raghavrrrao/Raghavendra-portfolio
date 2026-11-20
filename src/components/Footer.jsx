@@ -31,6 +31,15 @@ function Footer() {
                         >
                             <i className="fab fa-linkedin"></i>
                         </a>
+                        <a
+                            href="https://github.com/raghavrrrao"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="footer-social-icon"
+                            aria-label="GitHub - Raghavendra Rao"
+                        >
+                            <i className="fab fa-github"></i>
+                        </a>
                     </nav>
 
                     <nav className="footer-nav" aria-label="Footer site navigation">
@@ -46,7 +55,7 @@ function Footer() {
                         className="copyright"
                         aria-label={`Copyright Raghavendra Rao ${new Date().getFullYear()}`}
                     >
-                        &copy; 2024 Raghavendra Rao. All rights reserved.
+                        &copy; {new Date().getFullYear()} Raghavendra Rao. All rights reserved.
                     </div>
                 </div>
             </div>

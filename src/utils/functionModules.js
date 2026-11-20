@@ -61,9 +61,12 @@ export function initSkillsAnimation() {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('in-view');
+                // Skill cards no longer have progress bars; only animate one if present
                 const progress = entry.target.querySelector('.skill-progress');
-                const level = entry.target.getAttribute('data-level') || "85";
-                progress.style.width = level + '%';
+                if (progress) {
+                    const level = entry.target.getAttribute('data-level') || "85";
+                    progress.style.width = level + '%';
+                }
             }
         });
     }, { threshold: 0.5 });
@@ -189,6 +192,15 @@ export function initHeroAnimations() {
         translateY: [70, 0],
         duration: 800,
         delay: 600,
+        easing: 'easeOutExpo'
+    });
+
+    anime({
+        targets: '.hero-tech',
+        opacity: [0, 1],
+        translateY: [75, 0],
+        duration: 800,
+        delay: 700,
         easing: 'easeOutExpo'
     });
 

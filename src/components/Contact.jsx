@@ -55,7 +55,7 @@ function Contact() {
                             <div className="contact-icon"><i className="fas fa-phone"></i></div>
                             <div>
                                 <h3>Phone</h3>
-                                <p>+91 8879300301</p>
+                                <p><a href="tel:+918879300301">+91 88793 00301</a></p>
                             </div>
                         </div>
 
@@ -75,9 +75,25 @@ function Contact() {
                                     <a
                                         href="https://www.linkedin.com/in/raghavendra-rao-794112200/"
                                         target="_blank"
-                                        rel="noreferrer"
+                                        rel="noopener noreferrer"
                                     >
                                         Raghavendra Rao
+                                    </a>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div className="contact-item">
+                            <div className="contact-icon"><i className="fab fa-github"></i></div>
+                            <div>
+                                <h3>GitHub</h3>
+                                <p>
+                                    <a
+                                        href="https://github.com/raghavrrrao"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                    >
+                                        raghavrrrao
                                     </a>
                                 </p>
                             </div>

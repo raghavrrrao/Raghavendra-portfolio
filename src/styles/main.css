@@ -2253,3 +2253,113 @@ footer {
         padding-right: 20px;
     }
 }
+
+/* ====================== */
+/* === CONTENT UPDATE ADDITIONS === */
+/* Small rules for the new content elements; they reuse the existing palette. */
+/* ====================== */
+
+/* Shared technology tag list (hero, skills, projects) */
+.tag-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    list-style: none;
+}
+
+.tag-list li {
+    font-size: 0.85rem;
+    line-height: 1.4;
+    padding: 0.3rem 0.75rem;
+    border-radius: 5px;
+    color: var(--text-color);
+    background-color: rgba(78, 205, 196, 0.1);
+    border: 1px solid rgba(78, 205, 196, 0.25);
+}
+
+/* Hero technology highlights (faded in by initHeroAnimations) */
+.hero-tech {
+    margin-bottom: 2rem;
+    opacity: 0;
+}
+
+/* The longer hero title wraps badly at the fixed 3rem word size on smaller screens,
+   so let the words follow the existing responsive .hero-role sizes there. */
+@media (max-width: 1023px) {
+    .hero-role .focus-word {
+        font-size: inherit;
+    }
+}
+
+/* The full name is longer than the previous "Raghav"; at tablet widths it pushed the
+   fixed-width hero showcase card off-screen, so reuse the existing laptop name size there. */
+@media (min-width: 769px) and (max-width: 1023px) {
+    .hero-name {
+        font-size: clamp(2.2rem, 6vw, 3.2rem);
+    }
+}
+
+.skill-card .tag-list {
+    margin-top: 1rem;
+}
+
+/* Projects: group headings and the desktop software project grid */
+.projects-subtitle {
+    text-align: center;
+    color: var(--secondary-color);
+    font-size: 1.3rem;
+    margin: 2rem 0 0.5rem;
+}
+
+.software-projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+@media (max-width: 1024px) {
+    .software-projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .software-projects-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.project-content p + p {
+    margin-top: 0.75rem;
+}
+
+.project-card .tag-list {
+    margin-top: 1rem;
+}
+
+.project-card .project-note {
+    margin-top: 0.75rem;
+}
+
+/* Bulleted lists inside project cards and the experience timeline */
+.project-highlights,
+.timeline-points {
+    padding-left: 1.2rem;
+}
+
+.project-highlights {
+    margin-top: 1rem;
+}
+
+.project-highlights li,
+.timeline-points li {
+    color: #b0b0b0;
+    line-height: 1.6;
+}
+
+.timeline-points li + li {
+    margin-top: 0.35rem;
+}
+
+.education-card p + p {
+    margin-top: 0.5rem;
+}
